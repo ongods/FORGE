@@ -1,8 +1,14 @@
 <div align="center">
 
-<img src="assets/forge-logo.png" alt="FORGE anvil and hammer logo" width="240">
+<img src="assets/forge-logo-off-white.png" alt="FORGE anvil and hammer logo" width="240">
 
 # FORGE
+
+A recovery adapter for existing coding agents.
+
+[![JavaScript ES modules](https://img.shields.io/badge/JavaScript-ES_modules-F7DF1E?logo=javascript&logoColor=black)](src/observer.mjs)
+[![Node.js >=22](https://img.shields.io/badge/Node.js-%3E%3D22-5FA04E?logo=nodedotjs&logoColor=white)](package.json)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 </div>
 
