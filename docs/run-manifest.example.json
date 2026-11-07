@@ -1,0 +1,74 @@
+{
+  "stage": "observation_pilot",
+  "origin": "ordinary",
+  "task_id": null,
+  "repository": null,
+  "revision": null,
+  "task_input": null,
+  "visible_test_command": null,
+  "agent": { "id": "opencode", "version": null },
+  "adapter": {
+    "id": "opencode",
+    "version_or_revision": null,
+    "capabilities": {
+      "observation": "not_verified_live",
+      "file_and_read_evidence": "not_verified_live",
+      "recovery_delivery": "not_implemented",
+      "cancellation": "not_verified_live",
+      "usage_accounting": "not_verified_live"
+    },
+    "capability_evidence_references": []
+  },
+  "opencode_version": null,
+  "observer_version": "0.1.0",
+  "model": {
+    "provider": null,
+    "id": null,
+    "weights_revision_or_digest": null,
+    "quantization": null,
+    "server_name_and_version": null,
+    "local_endpoint": null,
+    "inference_host": null,
+    "context_length": null,
+    "sampling_and_inference_settings": null
+  },
+  "environment": {
+    "execution_host": null,
+    "os": null,
+    "hardware": null,
+    "python_version": null
+  },
+  "budget": {
+    "wall_seconds": null,
+    "token_limit_if_supported": null,
+    "enforcement_method": null,
+    "forge_recovery_attempts": 0
+  },
+  "observation_logs": [],
+  "observation_quality": {
+    "status": "not_checked",
+    "summary_references": [],
+    "issues": []
+  },
+  "started_at": null,
+  "ended_at": null,
+  "elapsed_seconds": null,
+  "status": "not_started",
+  "independent_acceptance": {
+    "verifier_reference_outside_agent_checkout": null,
+    "passed": null,
+    "test_or_evaluator_changes_detected": null
+  },
+  "measurements": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "token_accounting_source": null,
+    "observer_work_ms_partial": null,
+    "native_safeguard_interventions": null,
+    "human_assistance_count": null,
+    "human_assistance_notes": null
+  },
+  "manual_review": [],
+  "infrastructure_or_measurement_issues": [],
+  "missing_measurement_notes": []
+}

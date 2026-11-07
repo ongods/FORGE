@@ -1,0 +1,99 @@
+{
+  "task_id": "boltons-separator-454",
+  "repository": "https://github.com/mahmoud/boltons.git",
+  "revision": "1d525271754ed7aea7f2347ed16ddbcedb1097a3",
+  "provenance": {
+    "source_reference": "https://github.com/mahmoud/boltons/pull/454",
+    "license_or_reuse_constraints": "BSD-3-Clause; retain copyright, conditions, and disclaimer. Pinned license: https://raw.githubusercontent.com/mahmoud/boltons/1d525271754ed7aea7f2347ed16ddbcedb1097a3/LICENSE"
+  },
+  "task_input": "The shell argument formatting functions accept a sep parameter, but custom separators are ignored. Repair args2sh, args2cmd, and the escape_shell_args wrapper's behavior so the requested separator is used while preserving default spacing and existing escaping and quoting behavior. Only boltons/strutils.py may be changed.",
+  "environment": {
+    "os": "Windows (development preparation host; other platforms not verified)",
+    "python_version": "3.13.7",
+    "node_version": "22.14.0",
+    "git_version": "2.47.1",
+    "dependency_versions_reference": "The target module imports Python standard-library modules; no runtime dependency installation is required. The external checker requires Node.js >=22 and python on PATH. These are preparation settings, not an evaluated agent/model configuration.",
+    "working_directory": "<operator-owned-preparation-directory>",
+    "setup_commands": [
+      "git clone --depth 1 --branch 26.1.0 --single-branch https://github.com/mahmoud/boltons.git source",
+      "git -C source rev-parse HEAD"
+    ],
+    "setup_revision_requirement": "Require exactly 1d525271754ed7aea7f2347ed16ddbcedb1097a3; stop on disagreement. These commands were validated for operator preparation, not agent isolation."
+  },
+  "visible_test_command": "python -B -m doctest boltons/strutils.py",
+  "allowed_changes": {
+    "editable_paths": ["boltons/strutils.py"],
+    "protected_paths": [".git/", "tests/"],
+    "constraints": [
+      "All paths outside editable_paths are protected, including untracked and ignored additions.",
+      "Preserve the repository license and native agent safeguards.",
+      "Do not change tests, environment, dependency declarations, repository history, or evaluator files.",
+      "Do not add files, rename files, or use symlinks to redirect the allowed target outside the checkout.",
+      "Run independent acceptance and allowed-change integrity checks outside the editable agent checkout."
+    ],
+    "integrity_check_command": "node <FORGE-absolute-path>/docs/tasks/check-boltons-separator-changes.mjs <task-checkout-path>"
+  },
+  "independent_acceptance": {
+    "verifier_reference_outside_agent_checkout": "docs/tasks/verify-boltons-separator.mjs (FORGE repository; unavailable to the evaluated agent)",
+    "command": "node <FORGE-absolute-path>/docs/tasks/verify-boltons-separator.mjs <task-checkout-path>",
+    "working_directory": "<FORGE-absolute-path>",
+    "environment_reference": "Use the recorded preparation host settings above; record the actual independent evaluator environment before validation elsewhere.",
+    "expected_starting_result": "Nonzero exit with failures for custom separators; existing default formatting cases should remain valid. This is an expectation, not a recorded result.",
+    "expected_correct_result": "Zero exit from the same verifier, including custom separator behavior and existing escaping/quoting regressions. This is an expectation, not a recorded result.",
+    "agent_access_isolation": {
+      "method": "NOT VERIFIED. An operator-owned fresh starting checkout has passed a Git-object/history audit under .forge/task-seeds/boltons-separator-start, but actual evaluated-agent access controls are untested. Before a live task, deny access to FORGE task manifests, evaluator code, validation artifacts, reference worktrees, and answer-fetching routes. .forge/preparation/boltons-separator/source and its reference worktree are validation-only: they contain reference Git objects and must NEVER be used as live agent checkouts.",
+      "verified": false,
+      "evidence_reference": null
+    }
+  },
+  "validation": {
+    "setup": {
+      "status": "validated_for_preparation",
+      "passed": true,
+      "evidence_reference": ".forge/preparation/boltons-separator/validation.json; visible doctests exit 0 on both source and reference"
+    },
+    "starting_bug": {
+      "status": "validated_for_preparation",
+      "revision": "1d525271754ed7aea7f2347ed16ddbcedb1097a3",
+      "target_failure_confirmed": true,
+      "exit_code": 1,
+      "evidence_reference": ".forge/preparation/boltons-separator/source-acceptance.json; 20 of 32 behavior checks fail for ignored custom separators"
+    },
+    "known_correct_repair": {
+      "status": "validated_for_preparation",
+      "revision_or_patch_reference_outside_agent_checkout": "Code-only patch for boltons/strutils.py from upstream commit e53353583dc01d688ccb21cdc9c0126ae77fc43f applied to the pinned starting revision in a separate validation-only reference worktree. Upstream reference: https://github.com/mahmoud/boltons/commit/e53353583dc01d688ccb21cdc9c0126ae77fc43f",
+      "passed_same_verifier": true,
+      "exit_code": 0,
+      "evidence_reference": ".forge/preparation/boltons-separator/reference-acceptance.json; all 32 checks pass on the same starting revision plus the code-only upstream patch"
+    },
+    "allowed_change_check": {
+      "status": "validated_for_preparation",
+      "passed": true,
+      "evidence_reference": ".forge/preparation/boltons-separator/validation.json; source/reference scopes pass; controlled forbidden edits, hidden staged edits, extra files, and target symlink are rejected"
+    },
+    "fresh_starting_checkout": {
+      "status": "validated_for_preparation",
+      "path": ".forge/task-seeds/boltons-separator-start",
+      "revision": "1d525271754ed7aea7f2347ed16ddbcedb1097a3",
+      "only_local_commit_is_starting_revision": true,
+      "reference_fix_commit_absent": true,
+      "object_alternates_present": false,
+      "agent_access_isolation_verified": false,
+      "evidence_reference": ".forge/task-seeds/boltons-separator-start-audit.json"
+    },
+    "setup_or_infrastructure_issues": [
+      "Preparation checkout/reference worktree are unsuitable for a live agent task because reference Git objects are present.",
+      "Agent-access isolation has not been verified. No live agent/model run or recovery result is recorded."
+    ]
+  },
+  "readiness": {
+    "status": "not_ready",
+    "missing_evidence": [
+      "Enforced evaluated-agent access controls and verified evaluator/reference isolation; a clean starting checkout alone does not establish this."
+    ],
+    "unverified_assumptions": [
+      "The inspected starting checkout must remain free of answer objects and protected from reference access/fetching under the actual evaluated agent's enforced permissions.",
+      "Acceptance cases distinguish the intended repair while preserving existing behavior."
+    ]
+  }
+}

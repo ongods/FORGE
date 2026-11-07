@@ -1,0 +1,64 @@
+{
+  "task_id": null,
+  "repository": null,
+  "revision": null,
+  "provenance": {
+    "source_reference": null,
+    "license_or_reuse_constraints": null
+  },
+  "task_input": null,
+  "environment": {
+    "os": null,
+    "python_version": null,
+    "dependency_versions_reference": null,
+    "working_directory": null,
+    "setup_commands": []
+  },
+  "visible_test_command": null,
+  "allowed_changes": {
+    "editable_paths": [],
+    "protected_paths": [],
+    "constraints": [],
+    "integrity_check_command": null
+  },
+  "independent_acceptance": {
+    "verifier_reference_outside_agent_checkout": null,
+    "command": null,
+    "working_directory": null,
+    "environment_reference": null,
+    "expected_starting_result": null,
+    "expected_correct_result": null,
+    "agent_access_isolation": {
+      "method": null,
+      "verified": null,
+      "evidence_reference": null
+    }
+  },
+  "validation": {
+    "setup": {
+      "status": "not_prepared",
+      "passed": null,
+      "evidence_reference": null
+    },
+    "starting_bug": {
+      "status": "not_prepared",
+      "revision": null,
+      "target_failure_confirmed": null,
+      "exit_code": null,
+      "evidence_reference": null
+    },
+    "known_correct_repair": {
+      "status": "not_prepared",
+      "revision_or_patch_reference_outside_agent_checkout": null,
+      "passed_same_verifier": null,
+      "exit_code": null,
+      "evidence_reference": null
+    },
+    "setup_or_infrastructure_issues": []
+  },
+  "readiness": {
+    "status": "not_prepared",
+    "missing_evidence": [],
+    "unverified_assumptions": []
+  }
+}
