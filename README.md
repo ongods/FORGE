@@ -1,4 +1,10 @@
+<div align="center">
+
+<img src="assets/forge-logo.png" alt="FORGE anvil and hammer logo" width="240">
+
 # FORGE
+
+</div>
 
 FORGE is a recovery adapter layer for existing coding agents. A shared core tracks
 file state and previous attempts; agent-specific adapters connect it to native
